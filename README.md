@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IRD Prize Coupon Checker
 
-## Getting Started
+Bulk-check Nepal IRD prize-draw coupon numbers against the public winner data. Instead of searching each coupon number manually, paste hundreds or thousands at once and quickly see which ones won.
 
-First, run the development server:
+## Features
+
+- **Bulk input** — paste one coupon number per line; empty lines, whitespace, and duplicates are handled automatically
+- **Live official data** — fetches the full winner list, handling all pagination
+- **Fast lookups** — winner coupon numbers are loaded into an in-memory `Map`; comparisons happen locally, never one request per coupon
+- **Results table** — for each winning number shows prize category, rank, fiscal year, draw period, and claim status
+- **Filters** — view All, Winners, Not Found, or filter by prize category and fiscal year (categories/fiscal years are derived from the data, not hardcoded)
+- **Input feedback** — clearly reports ignored invalid lines and how many duplicates were removed
+- **String-safe** — coupon numbers are kept as strings so leading zeros are never lost
+- **Dark mode** — responsive UI that follows the system color scheme
+- **Client-side caching** — winner data is fetched once and reused for subsequent checks in the same session
+
+## Tech stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Bun
+
+## Getting started
+
+The project uses Bun as its package manager (see `packageManager` in `package.json`).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install dependencies
+bun install
+
+# Start the development server
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command         | Description               |
+| --------------- | ------------------------- |
+| `bun run dev`   | Start the dev server      |
+| `bun run build` | Create a production build |
+| `bun run start` | Run the production build  |
+| `bun run lint`  | Run ESLint                |
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Paste coupon numbers into the textarea, one per line (e.g. `048915618211`).
+2. Click **Check Numbers**.
+3. Review the summary (total checked / winners found / not found) and the results table.
+4. Use the filter buttons to narrow the results, or **Clear results and input** to start over.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Use **Load sample numbers** to quickly try the tool with example input.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE) © 2026 Samrajya Bhari

@@ -13,9 +13,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IRD Prize Coupon Checker",
+  metadataBase: new URL("https://irdprize.vercel.app/"),
+
+  title: {
+    default: "Nepal IRD Prize Coupon Checker",
+    template: "%s | IRD Prize Coupon Checker",
+  },
+
   description:
-    "Bulk-check coupon numbers against the official Nepal IRD prize-draw winner data.",
+    "Check Nepal IRD prize-draw coupon numbers in bulk. Paste hundreds or thousands of coupon numbers and quickly find winning coupons, prize categories, ranks, fiscal years, and draw details.",
+
+  keywords: [
+    "Nepal IRD prize checker",
+    "IRD prize coupon checker",
+    "Nepal prize coupon",
+    "IRD lottery checker",
+    "Nepal IRD winners",
+    "prize draw Nepal",
+    "coupon number checker Nepal",
+  ],
+
+  openGraph: {
+    title: "Nepal IRD Prize Coupon Checker",
+    description:
+      "Check Nepal IRD prize-draw coupon numbers in bulk and quickly find winning coupons and prize details.",
+    type: "website",
+    locale: "en_NP",
+    siteName: "IRD Prize Coupon Checker",
+    url: "https://irdprize.vercel.app/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
