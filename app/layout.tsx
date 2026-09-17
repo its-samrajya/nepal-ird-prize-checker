@@ -23,6 +23,10 @@ export const metadata: Metadata = {
   description:
     "Check Nepal IRD prize-draw coupon numbers in bulk. Paste hundreds or thousands of coupon numbers and quickly find winning coupons, prize categories, ranks, fiscal years, and draw details.",
 
+  verification: {
+    google: "niWjAzYuc_75ui6cdi_kKGPMHwNgK4Oh1CVDczCagpI",
+  },
+
   keywords: [
     "Nepal IRD prize checker",
     "IRD prize coupon checker",
