@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     title: "Nepal IRD Prize Coupon Checker",
     description:
       "Check Nepal IRD prize-draw coupon numbers in bulk and quickly find winning coupons and prize details.",
+    images: ["/og-image.png"],
     type: "website",
     locale: "en_NP",
     siteName: "IRD Prize Coupon Checker",
