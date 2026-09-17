@@ -12,6 +12,7 @@ import {
   type WinnersData,
 } from "@/lib/winners";
 import { FaGithub } from "react-icons/fa";
+import Image from "next/image";
 
 const EMPTY_SAMPLE =
   "048915618211\n047751629120\n053777634226\n123456789012\n036447852378\n026888979039";
@@ -80,8 +81,14 @@ export default function Home() {
     <main className="w-full flex-1">
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
         <header className="mb-8">
-          <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-            IRD Prize Coupon Checker 🇳🇵
+          <h1 className="flex gap-4 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
+            IRD Prize Coupon Checker
+            <Image
+              src="/nepali-flag.gif"
+              alt="Waving Nepal flag"
+              width={30}
+              height={30}
+            />
           </h1>
           <p className="mt-2 text-zinc-600 dark:text-zinc-400">
             Bulk-check coupon numbers against the official Nepal IRD prize-draw
@@ -181,7 +188,7 @@ export default function Home() {
             <FaGithub className="size-6" />
           </a>
 
-          <p>Vibecoded with ❤️ by Samrajya</p>
+          <p>Vibe Coded with ❤️ by Samrajya</p>
         </footer>
       </div>
     </main>
