@@ -81,7 +81,7 @@ export default function Home() {
       <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
         <header className="mb-8">
           <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-            IRD Prize Coupon Checker
+            IRD Prize Coupon Checker 🇳🇵
           </h1>
           <p className="mt-2 text-zinc-600 dark:text-zinc-400">
             Bulk-check coupon numbers against the official Nepal IRD prize-draw
